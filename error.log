@@ -1,0 +1,12 @@
+2022-12-07 16:29:32,757 [views | ERROR] Error in export_data function: 4 columns passed, passed data had 6 columns @ /usr/src/app/labeling/views.py : 73 : export_data
+2024-03-31 03:54:36,438 [views | ERROR] Error in is_persian function:'data' @ /usr/src/app/userdata/views.py : 145 : is_persian
+2024-03-31 03:59:46,630 [views | ERROR] Error in is_persian function:'data' @ /usr/src/app/userdata/views.py : 146 : is_persian
+2024-03-31 04:11:54,712 [views | ERROR] Error in is_persian function:'data' @ /usr/src/app/userdata/views.py : 146 : is_persian
+2024-03-31 04:16:58,958 [views | ERROR] Error in is_persian function:'data' @ /usr/src/app/userdata/views.py : 146 : is_persian
+2024-03-31 04:37:06,333 [views | ERROR] Error in is_persian function:'data' @ /usr/src/app/userdata/views.py : 146 : is_persian
+2024-03-31 04:39:10,906 [views | ERROR] Error in is_persian function:'data' @ /usr/src/app/userdata/views.py : 146 : is_persian
+2024-03-31 04:40:54,998 [views | ERROR] Error in is_persian function:'data' @ /usr/src/app/userdata/views.py : 147 : is_persian
+2024-03-31 04:47:13,055 [views | ERROR] Error in is_persian function:'data' @ /usr/src/app/userdata/views.py : 147 : is_persian
+2024-03-31 04:48:20,737 [views | ERROR] Error in is_persian function:'data' @ /usr/src/app/userdata/views.py : 148 : is_persian
+2024-03-31 05:55:42,508 [views | ERROR] Error in is_persian function:'data' @ /usr/src/app/userdata/views.py : 148 : is_persian
+2024-03-31 06:01:16,112 [views | ERROR] Error in is_persian function:'data' @ /usr/src/app/userdata/views.py : 148 : is_persian

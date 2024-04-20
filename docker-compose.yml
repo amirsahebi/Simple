@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && gunicorn --config gunicorn_config.py core.routing:application -k uvicorn.workers.UvicornWorker"
+    volumes:
+      - .:/usr/src/app/
+    ports:
+      - 6500:6500
+    depends_on:
+      - db
+    networks:
+    - tokenmanager
+  db:
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=hello_django
+      - POSTGRES_PASSWORD=hello_django
+      - POSTGRES_DB=hello_django_dev
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    networks:
+      - tokenmanager
+
+  redis:
+    image: redis
+    command: redis-server --appendonly yes --replica-read-only no 
+    container_name: app_redis
+    ports:
+      - 6379:6379
+    networks:
+      - tokenmanager
+
+  nginx:
+    image: nginx:latest
+    ports:
+            - 80:80
+            - 443:443
+    volumes:
+            - ./nginx:/etc/nginx/conf.d
+            - /etc/letsencrypt:/etc/letsencrypt
+    depends_on:
+            - web
+    networks:
+      - tokenmanager
+
+     
+
+volumes:
+  postgres_data:
+
+networks:
+  tokenmanager:
